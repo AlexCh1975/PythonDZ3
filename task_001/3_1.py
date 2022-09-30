@@ -8,13 +8,15 @@
 # 22
 
 import random
-length = int(input("Задайте длину списка: "))
 
-numbers = [random.randint(0, 100) for i in range(length)]
+def find_sum(length):
+    length = length if length > 0 else -length 
+    numbers = [random.randint(0, 100) for i in range(length)]
+    sum = 0
+    for i in range(length):
+        if (i + 1) % 2 != 0: sum += numbers[i]
+        # else: sum += numbers[i]
+    print(numbers)
+    print(sum)
 
-sum = 0
-for i in range(length):
-    if (i + 1) % 2 == 0: continue
-    else: sum += numbers[i]
-print(numbers)
-print(sum)
+find_sum(int(input("Задайте длину списка: ")))
