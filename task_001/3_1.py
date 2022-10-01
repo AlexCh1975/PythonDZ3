@@ -15,7 +15,6 @@ def find_sum(length):
     sum = 0
     for i in range(length):
         if (i + 1) % 2 != 0: sum += numbers[i]
-        # else: sum += numbers[i]
     print(numbers)
     print(sum)
 
